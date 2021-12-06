@@ -1,0 +1,347 @@
+﻿<html lang="en" class="fa-events-icons-ready"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEJD Yassine - Portfolio</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://use.fontawesome.com/a71e5ce1d6.js"></script><link href="https://use.fontawesome.com/a71e5ce1d6.css" media="all" rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"><script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+<style>
+    article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: flex;
+}
+.card {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: #fff;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+    overflow: hidden
+}
+
+.card .backgroundEffect {
+    bottom: 0;
+    height: 0px;
+    width: 100%
+}
+
+.card:hover {
+    color: #fff;
+    transform: scale(1.025);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px
+}
+
+.card:hover .backgroundEffect {
+    bottom: 0;
+    height: 320px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background: #1b9ce3;
+    animation: popBackground 0.3s ease-in
+}
+
+@keyframes popBackground {
+    0% {
+        height: 20px;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%
+    }
+
+    50% {
+        height: 80px;
+        border-top-left-radius: 75%;
+        border-top-right-radius: 75%
+    }
+
+    75% {
+        height: 160px;
+        border-top-left-radius: 85%;
+        border-top-right-radius: 85%
+    }
+
+    100% {
+        height: 320px;
+        border-top-left-radius: 100%;
+        border-top-right-radius: 100%
+    }
+}
+
+.card .pic {
+    position: relative
+}
+
+.card .pic img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover
+}
+
+.card .date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content2: center;
+    width: 50px;
+    height: 70px;
+    background-color: #1b9ce3;
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    transition: all ease
+}
+
+.card .date .day {
+    font-size: 14px;
+    font-weight: 600
+}
+
+.card .date .month,
+.card .date .year {
+    font-size: 10px
+}
+
+.card .text-muted {
+    font-size: 12px
+}
+
+.card:hover .text-muted {
+    color: #fff !important
+}
+
+.card .content2 {
+    padding: 0 20px
+}
+
+.card .content2 .btn {
+    display: flex;
+    align-items: center;
+    justify-content2: center;
+    padding: 5px 10px;
+    background-color: #1b9ce3;
+    border-radius: 25px;
+    font-size: 12px;
+    border: none
+}
+
+.card:hover .content2 .btn {
+    background: #fff;
+    color: #1b9ce3;
+    box-shadow: #0000001a 0px 3px 5px
+}
+
+.card .content2 .btn .fas {
+    font-size: 10px;
+    padding-left: 5px
+}
+
+.card .content2 .foot .admin {
+    color: #1b9ce3;
+    font-size: 12px
+}
+
+.card:hover .content2 .foot .admin {
+    color: #fff
+}
+
+.card .content2 .foot .icon {
+    font-size: 12px
+}</style>
+</head><body class="light" style="">
+    <nav>
+        <p>MEJD Yassine</p>
+
+        <button class="burger" id="burger">
+            ☰
+        </button>
+
+        <ul class="">
+            <li><a id="home-anchor" href="#">Home</a></li>
+            <li><a id="stack-anchor" href="#tech-stack">Tech Stack</a></li>
+            
+            <li><a id="edu-anchor" href="#education">Education</a></li>
+            <li><a id="exp-anchor" href="#experience">Experience</a></li>
+            <li><a id="proj-anchor" href="#projects">Projects</a></li>
+        </ul>
+    </nav>
+
+    <div class="toggle-bar">
+        <button class="mode" onclick="toggleTheme()"><i id="icon" class="fa fa-moon-o" aria-hidden="true"></i></button>
+    </div>
+
+    <div class="profile">
+        <img src="assets/img/portrait.jpg" alt="">
+        <div class="bio-text">
+            <h2>About Me</h2><span></span>
+            
+            <p>Informaticien comptant 2+ ans d'expérience. Expertise dans les domaines de la ...<br><br><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#rm" style="
+    float: right;
+">
+  Read More
+</button></p><div class="modal fade" id="rm" tabindex="-1" aria-labelledby="rm" style="display: none;" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title show" id="rm" aria-modal="true" role="dialog" style="padding-right: 17px; display: block;">About Me</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Informaticien comptant 2+ ans d'expérience. Expertise dans les domaines de la conception et du développement de logiciels ainsi que dans l'installation d'applications web spécifiques.
+ Maîtrise de plusieurs types de langages informatiques et capable de travailler sur différentes plateformes. Autonome mais capable de travailler en équipe. Grande disponibilité.<br> 
+Développement: JS - HTML - CSS3 - BOOTSTRAP - jQuery - AngularJS - PHP - JAVA - C - C++ .
+      </p></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<p></p>
+
+            <div class="social-media">
+                
+                <i class="fa fa-linkedin" aria-hidden="true"><a href="https://www.linkedin.com/in/mejdyassine/" target="_blank" rel="noopener">LinkedIn</a></i>
+                <i class="fa fa-github" aria-hidden="true"><a href="https://github.com/majdiyassin20" target="_blank" rel="noopener">GitHub</a></i>
+                
+                <i class="fa fa-download" aria-hidden="true"><a href="https://www.linkedin.com/in/mejdyassine/" target="_blank" rel="noopener">Résumé</a></i>
+                <i class="fa fa-envelope" aria-hidden="true"><a href="mailto:hahahou29@gmail.com" target="_blank" rel="noopener">Email Me</a></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="featured">
+        <iframe style="border-radius: 5px;" width="560" height="315" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3337.508422786112!2d-8.49057508516956!3d33.22698136821378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda91fcbed49ab23%3A0x1d268eb57559a244!2sL'ecole%20Sup%C3%A9rieure%20de%20Technologie!5e0!3m2!1sfr!2sma!4v1638816660055!5m2!1sfr!2sma" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+    </div>
+
+    <div class="tech-stack" id="tech-stack">
+        <h2>Tech Stack</h2><span></span>
+
+        <div class="stack-imgs">
+            <img src="assets/img/html5.svg" alt="HTML 5">
+            <img src="assets/img/css.svg" alt="CSS">
+            <img src="assets/img/javascript.svg" alt="JavaScript">
+            <img src="assets/img/typescript.svg" alt="TypeScript">
+            <img src="assets/img/php.svg" alt="PHP">
+            <img src="assets/img/angular.svg" alt="Angular">
+            <img src="assets/img/laravel.svg" alt="Laravel">
+            <img src="assets/img/firebase.svg" alt="Firebase">
+            <img src="assets/img/mysql.svg" alt="MySQL">
+            <img src="assets/img/googlecloud.svg" alt="Google Cloud">
+        </div>
+    </div>
+
+    
+
+    <div class="education" id="education">
+        <h2>Education</h2><span></span>
+        <div class="edu">
+            <span class="course"><i class="fa fa-book" aria-hidden="true"></i> DUT. Génie Logiciel</span>
+            <span class="school"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Ecole supérieure de technologie, Sidi Bennour</span>
+            <span class="date"><i class="fa fa-clock-o" aria-hidden="true"></i>
+                Aug 2019 - June 2022</span>
+            <p class="description">Étudiez l'informatique à l'Université EST, Sidi Bennour.</p>
+        </div>
+
+        <div class="edu">
+            <span class="course"><i class="fa fa-book" aria-hidden="true"></i>Baccalauréat - Science Mathématique</span>
+            <span class="school"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Lycée Oulad Hriz, Berrechid</span>
+            <span class="date"><i class="fa fa-clock-o" aria-hidden="true"></i>
+                Aug 2018 - June 2019</span>
+            
+        </div>
+    </div>
+
+    <div class="experience" id="experience">
+        <h2>Experience</h2><span></span>
+
+        <div class="exp">
+            <span class="role"><i class="fa fa-laptop" aria-hidden="true"></i>STAGE PFE DUT GENIE INFORMATIQUE</span>
+            <span class="company"><i class="fa fa-building-o" aria-hidden="true"></i> La Communauté, Berrechid</span>
+            <span class="date"><i class="fa fa-clock-o" aria-hidden="true"></i>
+                May 2021 - July 2021</span>
+            <span class="date">
+                <i class="fa fa-stack-overflow" aria-hidden="true"></i>
+                PHP, MySQL, BootStrap
+            </span>
+            <p class="description">CONCEPTION ET DÉVELOPPEMENT D’UNE APPLICATION WEB DE GESTION ET SUIVI DES LITIGES JUDICIAIRES
+
+<br>
+        </p></div>
+        <div class="exp">
+            <span class="role"><i class="fa fa-laptop" aria-hidden="true"></i>STAGE TECHNIQUE DUT GENIE INFORMATIQUE</span>
+            <span class="company"><i class="fa fa-building-o" aria-hidden="true"></i> Ecole supérieure de technologie, Sidi Bennour</span>
+            <span class="date"><i class="fa fa-clock-o" aria-hidden="true"></i>
+                Oct 2020 - Mar 2021</span>
+            <span class="date">
+                <i class="fa fa-stack-overflow" aria-hidden="true"></i>
+                Angular, JAVA
+            </span>
+            <p class="description"> CONCEPTION ET DEVELOPPEMENT D’UNE APPLICATION WEB DE GESTION DES CATALOGUES ET DEVIS
+
+<br>
+        </p></div>
+
+        
+
+        
+
+        
+    </div>
+
+    <div class="projects" id="projects">
+        <h2>Notable Projects</h2><span></span>
+        <div class="project-section">
+            <div class="card content">
+                <div class="seventh background pic">
+                </div>
+                
+            <div class="backgroundEffect"></div><div class="footer content2">
+                    <h3>STAGE PFE DUT GENIE INFORMATIQUE
+
+</h3>
+                    <p>CONCEPTION ET DÉVELOPPEMENT D’UNE APPLICATION WEB DE GESTION ET SUIVI DES LITIGES JUDICIAIRES.
+</p>
+                    <a href="https://docs.google.com/presentation/d/1N6vRRXPWp5kqrGviU2Osn6KkexjhoiH9/edit?usp=sharing&amp;ouid=115750511133904521448&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Check it out</a>
+                </div>
+            </div>
+            <div class="card content">
+                <div class=" sixth background pic">
+                </div><div class="backgroundEffect"></div>
+                <div class="footer content2">
+                    <h3>STAGE TECHNIQUE DUT GENIE INFORMATIQUE</h3>
+                    <p>CONCEPTION ET DEVELOPPEMENT D’UNE APPLICATION WEB DE GESTION DES CATALOGUES ET DEVIS
+
+</p>
+                    <a href="https://github.com/majdiyassin20" target="_blank" rel="noopener">Check it out</a>
+                </div>
+            </div><div class="card content">
+                <div class="seventh background pic">
+                </div><div class="backgroundEffect"></div>
+                <div class="footer content2">
+                    <h3>STAGE PFE DUT GENIE INFORMATIQUE
+
+</h3>
+                    <p>CONCEPTION ET DÉVELOPPEMENT D’UNE APPLICATION WEB DE GESTION ET SUIVI DES LITIGES JUDICIAIRES.
+</p>
+                    <a href="https://docs.google.com/presentation/d/1N6vRRXPWp5kqrGviU2Osn6KkexjhoiH9/edit?usp=sharing&amp;ouid=115750511133904521448&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Check it out</a>
+                </div>
+            </div>
+            
+            
+            
+            
+
+            
+            
+
+        </div>
+    </div>
+    <footer>
+        <span class="footer_desc">Done by <a class="git_link" href="https://github.com/majdiyassin20" target="_blank" rel="noopener">MEJD Yassine</a></span>
+    </footer>
+
+<script src="js/index.js"></script>
+
+</body></html>
